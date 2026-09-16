@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AtomMerge</title>
+<meta name="description" content="A physics merge puzzle built on the periodic table. Drop atoms, merge matching elements, climb from Hydrogen to Argon.">
+<style>
+  :root{
+    --bg:#0b1020; --panel:#141c33; --line:#243052;
+    --text:#e6ecff; --muted:#9aa7c7; --accent:#5fd3ff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:
+      radial-gradient(1100px 600px at 50% -10%, #1a2547 0%, transparent 60%),
+      var(--bg);
+    color:var(--text); min-height:100vh;
+    font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:72px 22px 80px}
+  a{color:var(--accent)}
+  h1{font-size:2.6rem; margin:0 0 4px; letter-spacing:-.02em}
+  .tag{color:var(--muted); font-size:1.05rem; margin:0 0 34px}
+
+  .atoms{display:flex; gap:10px; align-items:flex-end; margin:0 0 34px; flex-wrap:wrap}
+  .atom{
+    display:grid; place-items:center; border-radius:50%;
+    font-weight:700; color:#0b1020; font-size:.8rem;
+    box-shadow:inset 0 -3px 8px rgba(0,0,0,.28), 0 2px 10px rgba(0,0,0,.35);
+  }
+
+  h2{font-size:1.1rem; margin:36px 0 10px; color:var(--accent)}
+  ul{padding-left:20px} li{margin:6px 0}
+  .card{
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:12px; padding:18px 20px; margin:26px 0;
+  }
+  .card p:last-child{margin-bottom:0}
+  footer{
+    margin-top:56px; padding-top:20px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.9rem;
+    display:flex; gap:18px; flex-wrap:wrap;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="atoms">
+    <div class="atom" style="width:30px;height:30px;background:#BFE9FF;font-size:.65rem">H</div>
+    <div class="atom" style="width:38px;height:38px;background:#FFF3B0;font-size:.7rem">He</div>
+    <div class="atom" style="width:46px;height:46px;background:#B7F5C8">Li</div>
+    <div class="atom" style="width:54px;height:54px;background:#B8D4FF">Be</div>
+    <div class="atom" style="width:62px;height:62px;background:#FFB8BA;font-size:.9rem">B</div>
+    <div class="atom" style="width:70px;height:70px;background:#C8C8C8;font-size:.95rem">C</div>
+  </div>
+
+  <h1>AtomMerge</h1>
+  <p class="tag">A physics merge puzzle built on the periodic table.</p>
+
+  <p>Drop atoms into the container. Two of the same element touch, and they fuse
+  into the next one up. Hydrogen becomes Helium, Helium becomes Lithium, and on up
+  the table &mdash; as long as you can keep the stack below the danger line.</p>
+
+  <h2>Features</h2>
+  <ul>
+    <li>18 elements to climb, Hydrogen through Argon</li>
+    <li>Real 2D physics &mdash; every drop settles differently</li>
+    <li>Power-ups: bomb, ghost atom, magnet, freeze, upgrade, shake</li>
+    <li>Unlockable atom skins and merge effects, bought with coins you earn</li>
+    <li>Daily missions and a daily gift streak</li>
+    <li>English and Turkish</li>
+    <li>No real-money purchases</li>
+  </ul>
+
+  <div class="card">
+    <p><strong>Privacy.</strong> AtomMerge has no account, no login and no server.
+    Your progress is saved on your own device and never sent anywhere. The only
+    data that leaves your phone is what Google AdMob collects to show ads.
+    <a href="privacy.html">Read the full privacy policy</a>.</p>
+  </div>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="https://github.com/JakeNomad/AtomMerge">GitHub</a>
+    <span>&copy; 2026 Mustafa Emir</span>
+  </footer>
+
+</div>
+</body>
+</html>
